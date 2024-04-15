@@ -11,6 +11,7 @@
 #endif
 
 #import "MaterialActivityIndicator.h"
+#import "MDCActivityIndicator+Interface.h"
 #import "MDCActivityIndicator.h"
 #import "MDCActivityIndicatorDelegate.h"
 #import "CAMediaTimingFunction+MDCAnimationTiming.h"
@@ -58,6 +59,9 @@
 #import "MDCRippleView.h"
 #import "MDCRippleViewDelegate.h"
 #import "MDCStatefulRippleView.h"
+#import "MaterialShadow.h"
+#import "MDCShadow.h"
+#import "MDCShadowsCollection.h"
 #import "MaterialShadowElevations.h"
 #import "MDCShadowElevations.h"
 #import "MaterialShadowLayer.h"
@@ -79,6 +83,7 @@
 #import "MDCShapedShadowLayer.h"
 #import "MDCShapedView.h"
 #import "MDCShapeGenerating.h"
+#import "MDCShapeMediator.h"
 #import "MaterialSlider.h"
 #import "MDCSlider.h"
 #import "MDCSliderDelegate.h"

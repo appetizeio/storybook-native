@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MJq-Ve-jC6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MJq-Ve-jC6">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,15 +36,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gvL-Cc-knE">
-                            <rect key="frame" x="0.0" y="100" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="122" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Default" id="0dd-Lr-skp" customClass="TableViewCell" customModule="iOSStoryBookDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0dd-Lr-skp" id="egm-ew-yeQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="382.66666666666669" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383.66666666666669" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -293,7 +293,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="MRs-qk-8hK">
-                                <rect key="frame" x="16" y="59.999999999999993" width="382" height="79.333333333333314"/>
+                                <rect key="frame" x="16" y="59.999999999999993" width="382" height="102.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xX-Tu-MaZ" customClass="TitleLabel" customModule="iOSStoryBookDemo" customModuleProvider="target">
                                         <rect key="frame" x="169.33333333333334" y="0.0" width="43.666666666666657" height="20.333333333333332"/>
@@ -302,20 +302,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pF0-F0-Fdw">
-                                        <rect key="frame" x="24" y="52.333333333333329" width="334" height="27"/>
+                                        <rect key="frame" x="24" y="52.333333333333329" width="334" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlC-qp-ADr" customClass="TitleLabel" customModule="iOSStoryBookDemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="3.3333333333333428" width="10.333333333333334" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="14.999999999999998" width="10.333333333333334" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJJ-98-L4b" customClass="MDCSlider">
-                                                <rect key="frame" x="18.333333333333343" y="0.0" width="279.33333333333326" height="27"/>
+                                                <rect key="frame" x="18.333333333333343" y="0.0" width="279.33333333333326" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88H-ba-78s" customClass="TitleLabel" customModule="iOSStoryBookDemo" customModuleProvider="target">
-                                                <rect key="frame" x="305.66666666666669" y="3.3333333333333428" width="28.333333333333314" height="20.333333333333332"/>
+                                                <rect key="frame" x="305.66666666666669" y="14.999999999999998" width="28.333333333333314" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -342,14 +342,6 @@
             <point key="canvasLocation" x="3844.9275362318845" y="-319.41964285714283"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="CJJ-98-L4b">
-            <size key="intrinsicContentSize" width="100" height="27"/>
-        </designable>
-        <designable name="z2v-aG-EEF">
-            <size key="intrinsicContentSize" width="26.5" height="26.5"/>
-        </designable>
-    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
