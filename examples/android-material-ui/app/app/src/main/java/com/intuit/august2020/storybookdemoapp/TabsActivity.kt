@@ -3,21 +3,24 @@ package com.intuit.august2020.storybookdemoapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_tabs.*
+import com.intuit.august2020.storybookdemoapp.databinding.ActivityTabsBinding
 
 class TabsActivity : AppCompatActivity() {
+
+	private lateinit var binding: ActivityTabsBinding
 	private fun updateTabLabel(index: Int, key: String) {
-		var tab: TabLayout.Tab = tabLayout.getTabAt(index) ?: return
+		val tab: TabLayout.Tab = binding.tabLayout.getTabAt(index) ?: return
 
 		if (intent.hasExtra(key)) {
-			var label = intent.getStringExtra(key)
+			val label = intent.getStringExtra(key)
 			tab.text = label
 		}
 	}
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_tabs)
+		binding = ActivityTabsBinding.inflate(layoutInflater)
+		setContentView(binding.root)
 
 		updateTabLabel(0, "label1")
 		updateTabLabel(1, "label2")

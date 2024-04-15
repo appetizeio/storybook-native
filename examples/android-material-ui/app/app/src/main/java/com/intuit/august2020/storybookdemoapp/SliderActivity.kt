@@ -2,35 +2,37 @@ package com.intuit.august2020.storybookdemoapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.RadioButton
 import com.google.android.material.slider.Slider
-import kotlinx.android.synthetic.main.activity_slider.*
+import com.intuit.august2020.storybookdemoapp.databinding.ActivitySliderBinding
 import java.text.NumberFormat
 import java.util.*
 
 class SliderActivity : AppCompatActivity() {
+
+	private lateinit var binding: ActivitySliderBinding
 	private fun updateMinValue(slider: Slider, key: String) {
 		if (intent.hasExtra(key)) {
-			var value = intent.getStringExtra(key)
+			val value = intent.getStringExtra(key).orEmpty()
 			slider.valueFrom = value.toFloat()
 		}
 	}
 
 	private fun updateMaxValue(slider: Slider, key: String) {
 		if (intent.hasExtra(key)) {
-			var value = intent.getStringExtra(key)
+			val value = intent.getStringExtra(key).orEmpty()
 			slider.valueTo = value.toFloat()
 		}
 	}
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_slider)
+		binding = ActivitySliderBinding.inflate(layoutInflater)
+		setContentView(binding.root)
 
-		updateMinValue(rangeSlider, "rangeMin")
-		updateMaxValue(rangeSlider, "rangeMax")
+		updateMinValue(binding.rangeSlider, "rangeMin")
+		updateMaxValue(binding.rangeSlider, "rangeMax")
 
-		rangeSlider.setLabelFormatter { value: Float ->
+		binding.rangeSlider.setLabelFormatter { value: Float ->
 			val format = NumberFormat.getCurrencyInstance()
 			format.maximumFractionDigits = 0
 			format.currency = Currency.getInstance("USD")

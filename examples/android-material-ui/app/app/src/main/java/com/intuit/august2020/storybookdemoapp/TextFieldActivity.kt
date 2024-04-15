@@ -2,26 +2,29 @@ package com.intuit.august2020.storybookdemoapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_text_field.*
+import com.intuit.august2020.storybookdemoapp.databinding.ActivityTextFieldBinding
 
 class TextFieldActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityTextFieldBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_text_field)
+        binding = ActivityTextFieldBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         if (intent.hasExtra("helperText")) {
-            var text = intent.getStringExtra("helperText")
-            textField.helperText = text
+            val text = intent.getStringExtra("helperText")
+            binding.textField.helperText = text
         }
 
         if (intent.hasExtra("placeholderText")) {
-            var text = intent.getStringExtra("placeholderText")
-            textField.placeholderText = text
+            val text = intent.getStringExtra("placeholderText")
+            binding.textField.placeholderText = text
         }
 
         if (intent.hasExtra("hintText")) {
-            var text = intent.getStringExtra("hintText")
-            textField.hint = text
+            val text = intent.getStringExtra("hintText")
+            binding.textField.hint = text
         }
     }
 }

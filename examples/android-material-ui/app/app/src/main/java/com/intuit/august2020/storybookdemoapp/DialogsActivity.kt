@@ -13,17 +13,17 @@ class DialogsActivity : AppCompatActivity() {
 
 		var header = resources.getString(R.string.title)
 		if (intent.hasExtra("header")) {
-			header = intent.getStringExtra("header");
+			header = intent.getStringExtra("header").orEmpty();
 		}
 
 		var cancelText = resources.getString(R.string.dialogCancel)
 		if (intent.hasExtra("cancelText")) {
-			cancelText = intent.getStringExtra("cancelText")
+			cancelText = intent.getStringExtra("cancelText").orEmpty()
 		}
 
 		var okText = resources.getString(R.string.dialogOk)
 		if (intent.hasExtra("confirmText")) {
-			okText = intent.getStringExtra("confirmText")
+			okText = intent.getStringExtra("confirmText").orEmpty()
 		}
 
 		MaterialAlertDialogBuilder(this)
